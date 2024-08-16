@@ -1,0 +1,12 @@
+{
+  "name": "node-hello-world",
+  "version": "1.0.0",
+  "description": "node hello world app to test cloud deployment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "József Mandula",
+  "license": "ISC"
+}
