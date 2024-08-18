@@ -4,7 +4,7 @@ RUN addgroup app && adduser -S -G app app
 
 USER app
 
-WORKDIR /home/app
+WORKDIR /app
 
 COPY package*.json ./
 
@@ -16,10 +16,14 @@ USER app
 
 RUN npm install
 
-COPY src/ ./
+COPY src/ ./src
 
-ENV HOST=0.0.0.0 
+ENV HOST=0.0.0.0
+
+ENV PORT=3000
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+ENTRYPOINT ["npm"]
+
+CMD ["run", "start"]

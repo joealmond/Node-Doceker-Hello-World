@@ -2,11 +2,19 @@
   "name": "node-hello-world",
   "version": "1.0.0",
   "description": "node hello world app to test cloud deployment",
+  "author": "József Mandula",
+  "license": "ISC",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
-  "author": "József Mandula",
-  "license": "ISC"
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
